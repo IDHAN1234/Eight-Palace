@@ -1,0 +1,514 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none ;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 50px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(252, 94, 181, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #c3ffea;
+  font-weight: bolder;
+  font-size: 50px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 30px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/*--- NAVBAR & HEADER --- */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  color: white;
+  z-index: 100;
+  transition: background-color 0.3s;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0 10px;
+}
+
+.navbar a:hover {
+  color: #c79c36;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.phone-icon {
+  font-size: 30px;
+}
+
+.nav-center .logo {
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+.nav-right a {
+  font-size: 20px;
+}
+
+/* Giới thiệu */
+.gioiThieu {
+  position: relative;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: rgb(247, 247, 247);
+}
+
+.hinhGt {
+  position: absolute;
+  filter: brightness(0.5), contrast(1.3);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.vanGt {
+  text-align: left;
+  padding: 0 70px;
+  transform: translateY(-70px);
+}
+
+.vanGt h1 {
+  font-size: 50px;
+  font-weight: 600;
+  max-width: 400px;
+}
+
+/* Sảnh tiệc, trang trí, thực đơn */
+
+.thucDon,
+.trangTri,
+.sanhTiec {
+  padding: 80px 40px;
+  background: #ffffff9a;
+  max-width: 1200px;
+  margin: 80px auto;
+}
+
+.thucDonNd,
+.trangTriNd,
+.sanhTiecNd {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.hinhTd,
+.hinhTt,
+.hinhSt {
+  flex: 1;
+  min-width: 300px;
+}
+
+.hinhTd img,
+.hinhTt img,
+.hinhSt img {
+  height: auto;
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
+.vanTd,
+.vanTt,
+.vanSt {
+  flex: 1;
+  padding-left: 30px;
+  min-width: 300px;
+}
+
+.vanTd h2,
+.vanTt h2,
+.vanSt h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.vanTd p,
+.vanTt p,
+.vanSt p {
+  margin-bottom: 30px;
+  font-size: 15px;
+}
+
+/* xem thêm */
+.nut {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1.5px solid #c79c36;
+  color: #c79c36;
+  text-decoration: none;
+  transition: 0.3s;
+  border-radius: 4px;
+}
+
+.nut:hover {
+  background: #c79c36;
+  color: #fff;
+}
+
+/* --- 8. LIÊN HỆ (SECTION 7) --- */
+.contact-form-section {
+  background-color: #d5ca6f;
+  /* Màu nền xanh nhạt cho form */
+  padding: 80px 0;
+  color: #333;
+}
+
+.form-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  color: #b18e5e;
+  /* Màu vàng nâu */
+  margin-bottom: 40px;
+}
+
+.consultation-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 900px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.form-group {
+  flex: 1 1 calc(25% - 15px);
+  min-width: 180px;
+}
+
+.form-group:nth-child(-n+4) {
+  width: calc(25% - 20px);
+}
+
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  background-color: #ffffff;
+  font-size: 14px;
+  color: #333;
+}
+
+.form-group select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6"><path fill="%23333" d="M0 0l5 6 5-6z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 10px;
+}
+
+.submit-button {
+  display: block;
+  width: 250px;
+  margin: 20px auto 0;
+  padding: 12px 30px;
+  background-color: #c9e49c;
+  color: #333;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #a8cd7a;
+}
+
+/* --- 9. FINAL FOOTER (SECTION 8) --- */
+.final-footer {
+  background-color: #f0f0e8;
+  padding: 60px 0;
+  color: #333;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+.footer-left {
+  flex: 1;
+  padding-right: 30px;
+}
+
+.footer-logo {
+  font-family: 'Pacifico', cursive;
+  font-size: 24px;
+  color: #b18e5e;
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+
+.contact-info .info-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.contact-info .icon {
+  font-size: 18px;
+  margin-right: 10px;
+  color: #b18e5e;
+}
+
+.contact-info p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.contact-info p span {
+  font-weight: 700;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  filter: invert(30%) sepia(10%) saturate(10%) hue-rotate(300deg) brightness(90%) contrast(90%);
+}
+
+.footer-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.map-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border: 1px solid #ddd;
+}
+
+
+/* RESPONSIVE */
+/* --- TABLET (768px) --- */
+
+@media (min-width: 768px) {
+
+  /* Chuyển sang layout 2 cột */
+  .thucDonNd,
+  .trangTriNd,
+  .sanhTiengNd {
+    flex-direction: row;
+    /* Xếp hàng ngang */
+    gap: 50px;
+    /* Trả lại gap lớn */
+    text-align: left;
+    /* Trả lại căn lề trái */
+  }
+
+  /* Thêm lại padding-left cho cột chữ */
+  .vanTd,
+  .vanTt,
+  .vanSt {
+    padding-left: 30px;
+  }
+
+}
+
+.slider-dimensions {
+  width: min(100vw, 1000px);
+  aspect-ratio: 16 / 9;
+}
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  background-color: lightgray;
+}
+
+.slider {
+  position: absolute;
+  display: flex;
+  transform: translateX(-0%);
+  transition: transform 1s;
+}
+
+.slider > div {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.nav-container {
+  position: absolute;
+  padding: 0 20px 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: radial-gradient(transparent, rgba(0,0,0,.3));
+  opacity: 0;
+  transition: opacity .2s;
+}
+
+.nav-container:hover {
+  opacity: 1;
+}
+
+.index-container {
+  align-self: flex-end;
+  display: flex;
+  gap: 30px;
+}
+
+.index-container > button {
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: rgba(255,255,255,.3);
+  transition: background-color .2s;
+  cursor: pointer;
+}
+
+.index-container > button:hover {
+  background-color: rgba(255,255,255,.7);
+}
+
+button[data-index-change] {
+  font-size: 40px;
+  color: white;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  .nav-container {
+    padding: 0 0 10px;
+  }
+  
+  .index-container {
+    gap: 20px;
+  }
+}
