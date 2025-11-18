@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: false });
 });
 
-// Bắt đầu khối đảm bảo HTML đã tải
+// menudropdown
 document.addEventListener('DOMContentLoaded', function() {
     
     const menuToggle = document.querySelector('.menu-item-dropdown .main-link');
