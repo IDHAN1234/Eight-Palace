@@ -137,30 +137,5 @@ CSS
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
 }
-🚀 Hướng dẫn Chạy Dự án
-Do dự án sử dụng đường dẫn tương đối và các module ES6 (nếu có), bạn nên chạy trên môi trường Server ảo thay vì mở trực tiếp file.
-
-Cài đặt:
-
-Tải và cài đặt VS Code.
-
-Cài đặt Extension Live Server trong VS Code.
-
-Khởi chạy:
-
-Mở thư mục dự án trong VS Code.
-
-Vào thư mục HTML, chuột phải vào file trangchu.html.
-
-Chọn "Open with Live Server".
-
-👤 Thông tin Tác giả
-Sinh viên: [Điền Tên Của Bạn]
-
-MSSV: [Điền MSSV]
-
-Lớp: [Điền Tên Lớp]
-
-Email: [Điền Email]
 
 Dự án được thực hiện nhằm mục đích học tập.
