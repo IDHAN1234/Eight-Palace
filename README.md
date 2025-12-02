@@ -42,8 +42,7 @@ Giao diện chọn phong cách bài trí bàn tiệc trực quan.
 Trang Trí & Dịch Vụ: Thư viện hình ảnh các mẫu trang trí và thông tin chi tiết các gói dịch vụ (Tiệc cưới, Hội nghị, Sự kiện).
 
 📂 Cấu trúc Thư mục
-Dựa trên đường dẫn trong code (../Assets/...), cấu trúc dự án được tổ chức như sau:
-
+```text
 EIGHT-PALACE/
 │
 ├── HTML/                       # Giao diện người dùng
@@ -77,6 +76,7 @@ EIGHT-PALACE/
 │   └── Images/                 # Hình ảnh & Video (.mp4)
 │
 └── README.md
+```
 
 🛠️ Công nghệ & Kỹ thuật
 HTML5: Semantic Tags (header, nav, section, footer).
