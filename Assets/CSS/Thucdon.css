@@ -84,6 +84,8 @@ body {
     justify-content: space-around;
     padding: 30px;
     align-items: center;
+    max-height: 90vh; 
+    overflow-y: auto;
 }
 
 /* ĐỊNH KIỂU 2 CỘT */
@@ -195,8 +197,8 @@ body {
 }
 
 .thucDonNd {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 30px;
 }
 
@@ -398,29 +400,134 @@ body {
 }
 
 /* RESPONSIVE */
+
+@media (min-width: 1024px) {
+    .thucDonNd {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 15px 30px;
+    }
+    .nav-center .logo {
+        font-size: 16px;
+    }
+    .nav-right a {
+        font-size: 13px;
+    }
+
+    .consultation-form > .form-group:nth-child(-n+4),
+    .form-group {
+        width: calc(50% - 10px); 
+        min-width: unset;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        padding: 0 20px;
+    }
+    .footer-left {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+    .contact-info .info-item {
+        justify-content: center;
+        text-align: left; 
+    }
+    .footer-right {
+        justify-content: center;
+        width: 100%;
+    }
+    .map-image {
+        max-width: 100%;
+    }
+}
+
 @media (max-width: 768px) {
-  .gioiThieu {
-    padding: 0 30px;
-    height: 60vh;
-  }
+    .navbar {
+        padding: 15px 15px;
+    }
+    .nav-center {
+        display: none; 
+    }
+    .nav-left a, .nav-right a {
+        font-size: 12px;
+        margin: 0 5px;
+    }
+    .phone-icon {
+        font-size: 16px;
+    }
+    
+    .dropdown-content {
+        width: 90vw; 
+        padding: 20px 10px;
+        flex-direction: column; 
+        text-align: center;
+        justify-content: flex-start;
+    }
 
-  .vanGt h1 {
-    font-size: 32px;
-  }
 
-  .thucDon {
-    padding: 40px 20px;
-    margin: 40px auto;
-  }
-  
-  .mon {
-    flex-direction: column;
-    text-align: center;
-    gap: 15px;
-  }
-  
-  .mon img {
-    width: 100%;
-    height: 200px;
-  }
+    .gioiThieu {
+        height: 40vh; 
+    }
+    .vanGt {
+        padding: 0 20px;
+        transform: translateY(-20px);
+    }
+    .vanGt h1 {
+        font-size: 32px;
+        max-width: 100%;
+    }
+
+    .thucDon {
+        padding: 40px 20px;
+        margin: 40px auto;
+    }
+    
+    .thucDon h2 {
+        font-size: 24px;
+    }
+    
+    .thucDonNd {
+        grid-template-columns: 1fr; 
+    }
+    
+    .mon {
+        flex-direction: column; 
+        text-align: center;
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    .mon img {
+        width: 100%; 
+        height: 200px; 
+    }
+
+    .consultation-form > .form-group:nth-child(-n+4),
+    .form-group {
+        width: 100%;
+        min-width: 100%;
+        flex-basis: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .gioiThieu {
+        height: 30vh;
+    }
+    .vanGt h1 {
+        font-size: 24px;
+    }
+    
+    .mon h3 {
+        font-size: 18px;
+    }
+    .mon .gia {
+        font-size: 16px;
+    }
 }

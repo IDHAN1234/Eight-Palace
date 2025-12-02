@@ -323,27 +323,145 @@ body {
 
 
 /* RESPONSIVE */
-/* --- TABLET (768px) --- */
+
+@media (max-width: 1024px) {
+    /* Navbar */
+    .navbar {
+        padding: 15px 30px;
+    }
+    .nav-center .logo {
+        font-size: 16px;
+    }
+    .nav-right a {
+        font-size: 13px;
+    }
+
+    .consultation-form > .form-group:nth-child(-n+4),
+    .form-group {
+        width: calc(50% - 10px); 
+        min-width: unset;
+    }
+    .consultation-form > .form-group:nth-child(7) {
+        width: 100%;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        padding: 0 20px;
+    }
+    .footer-left {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+    .contact-info .info-item {
+        justify-content: center;
+        text-align: left; 
+    }
+    .footer-right {
+        justify-content: center;
+        width: 100%;
+    }
+    .map-image {
+        max-width: 100%;
+    }
+}
+
 
 @media (min-width: 768px) {
+    .thucDonNd,
+    .trangTriNd,
+    .sanhTiecNd {
+        flex-direction: row;
+        gap: 50px;
+        text-align: left;
+        justify-content: space-between;
+    }
+    
+    .vanTd,
+    .vanTt,
+    .vanSt {
+        padding-left: 30px;
+        margin-right: 0; 
+    }
+}
 
-  /* Chuyển sang layout 2 cột */
-  .thucDonNd,
-  .trangTriNd,
-  .sanhTiengNd {
-    flex-direction: row;
-    /* Xếp hàng ngang */
-    gap: 50px;
-    /* Trả lại gap lớn */
-    text-align: left;
-    /* Trả lại căn lề trái */
-  }
+@media (max-width: 767px) {
+    .navbar {
+        padding: 15px 10px;
+    }
+    .nav-center {
+        display: none; 
+    }
+    .nav-left a, .nav-right a {
+        font-size: 12px;
+        margin: 0 5px;
+    }
+    .phone-icon {
+        font-size: 16px;
+    }
 
-  /* Thêm lại padding-left cho cột chữ */
-  .vanTd,
-  .vanTt,
-  .vanSt {
-    padding-left: 30px;
-  }
+    .gioiThieu {
+        height: 40vh; 
+    }
+    .vanGt {
+        padding: 0 20px;
+        transform: translateY(-20px);
+    }
+    .vanGt h1 {
+        font-size: 32px;
+        max-width: 100%;
+    }
 
+    .thucDon,
+    .trangTri,
+    .sanhTiec {
+        padding: 30px 15px;
+        margin: 30px auto;
+    }
+
+    .thucDonNd,
+    .trangTriNd,
+    .sanhTiecNd {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .hinhTd,
+    .hinhTt,
+    .hinhSt {
+        min-width: 100%;
+        order: -1; 
+    }
+
+    .vanTd,
+    .vanTt,
+    .vanSt {
+        min-width: 100%;
+        padding-left: 0;
+        margin-right: 0;
+    }
+
+    .vanTd p,
+    .vanTt p,
+    .vanSt p {
+        text-align: left; 
+    }
+
+    .nut {
+        display: inline-block;
+        margin: 0 auto;
+    }
+    
+    .contact-form-section {
+        padding: 40px 20px;
+    }
+    .consultation-form > .form-group:nth-child(-n+4),
+    .form-group {
+        width: 100%;
+        min-width: 100%;
+        flex-basis: 100%;
+    }
 }

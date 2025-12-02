@@ -118,6 +118,8 @@ body {
     justify-content: space-around;
     padding: 30px;
     align-items: center;
+    max-height: 90vh; 
+    overflow-y: auto;
 }
 
 /* ĐỊNH KIỂU 2 CỘT */
@@ -128,6 +130,7 @@ body {
     gap: 15px;
     padding-right: 30px;
     border-right: 2px solid #fff3cd;
+    flex-shrink: 0;
 }
 
 /* CÁC MỤC MENU*/
@@ -597,65 +600,177 @@ body {
     border: 1px solid #ddd;
 }
 
-/* Responsive cho màn hình nhỏ hơn 768px */
+
+
+/* --- RESPONSIVE DESIGN --- */
+
+
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 15px 30px;
+    }
+    .nav-center .logo {
+        font-size: 16px;
+    }
+    .nav-right a {
+        font-size: 13px;
+    }
+
+    .consultation-form > .form-group:nth-child(-n+4),
+    .form-group {
+        width: calc(50% - 10px); 
+        min-width: unset;
+    }
+
+    .consultation-form > .form-group:nth-child(7) {
+        width: 100%;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        padding: 0 20px;
+    }
+    .footer-left {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+    .contact-info .info-item {
+        justify-content: center;
+        text-align: left; 
+    }
+    .footer-right {
+        justify-content: center;
+        width: 100%;
+    }
+    .map-image {
+        max-width: 100%;
+    }
+}
+
+
+/* Responsive cho màn hình nhỏ hơn 768px (Mobile) */
 @media (max-width: 768px) {
 
-    /* --- 1. HERO & NAVBAR --- */
+    .hero-section {
+        height: 60vh; 
+    }
+
     .hero-content h1 {
         font-size: 2em;
-        /* Bạn làm đúng! */
     }
 
     .hero-content h2 {
         font-size: 1.4em;
-        /* Bạn làm đúng! */
     }
 
     .navbar {
         padding: 15px 20px;
-        /* Giảm padding */
     }
 
-    /* Ẩn bớt link để tránh vỡ layout, lý tưởng nhất là làm 1 menu hamburger */
-    .navbar .nav-center,
-    .navbar .contact {
+    .nav-left, .nav-right {
+        gap: 5px;
+    }
+    .nav-center .logo {
+        font-size: 14px;
+    }
+    
+    .nav-left a, .nav-right a:not(.main-link), .nav-center {
+        font-size: 12px;
+    }
+    .nav-center {
         display: none;
     }
+    
+    .dropdown-content {
+        width: 90vw; 
+        padding: 20px 10px;
+        flex-direction: column; 
+        text-align: center;
+        justify-content: flex-start;
+    }
 
-    /* --- 2. DETAIL SECTION (Sửa lỗi của bạn) --- */
+    .footer-nav {
+        width: 100%; 
+        border-right: none;
+        border-bottom: 1px solid #fff3cd; 
+        padding-right: 0;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+
+    .footer-nav .nav-item {
+        width: 100%; 
+        text-align: center;
+        border-bottom: none;
+    }
+
+    .footer-info {
+        padding-left: 0;
+        width: 100%;
+    }
+    .footer-info .info-group {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        text-align: left;
+    }
+    .social-links {
+        justify-content: center;
+    }
+
+    .detail-section {
+        padding: 40px 20px;
+    }
+    
     .detail-content {
         flex-direction: column;
-        /* Xếp chồng 2 cột */
         gap: 30px;
     }
 
-    /* Sửa lỗi gõ sai: .detail-video-container */
     .detail-video-container,
     .detail-text {
         max-width: 100%;
-        /* Cho 2 cột chiếm 100% */
         padding-right: 0;
     }
 
-    /* Sửa lỗi video bị tràn màn hình */
-    .video-bg {
+    .detail-video-container {
         width: 100%;
-        height: auto;
-        /* Tự động tính chiều cao */
-        padding-bottom: 0;
-        /* Bỏ padding-bottom nếu không dùng trick 16:9 */
-        /* Hoặc dùng 16:9: */
-        /* padding-bottom: 56.25%; height: 0; */
+        max-width: 100%;
+        height: 0;
+        padding-bottom: 56.25%; 
+        position: relative;
+    }
+    .video-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding-bottom: 0; 
+        object-fit: cover;
+    }
+    .detail-text p {
+        text-align: left;
     }
 
-    /* --- 3. SERVICES (Bổ sung) --- */
+
+    #cac-dich-vu {
+        padding: 40px 20px;
+    }
+    .services-title {
+        font-size: 32px;
+    }
+
     .services-grid {
         flex-direction: column;
-        /* Xếp chồng các dịch vụ */
-        gap: 30px;
+        gap: 20px;
+    }
+    .service-item img {
+        height: 250px; 
     }
 
-    /* --- 4. OFFER (Bổ sung) --- */
     #uu-dai {
         padding-top: 50px;
         padding-bottom: 50px;
@@ -663,70 +778,65 @@ body {
 
     .offer-layout {
         flex-direction: column;
-        /* Xếp chồng text và ảnh */
-        gap: 40px;
+        gap: 30px;
     }
 
     .offer-content {
         padding-right: 0;
-        /* Xóa padding */
+        text-align: center; 
     }
 
     .offer-content::before {
-        /* Ẩn hoặc điều chỉnh lại viền trang trí */
         display: none;
     }
 
     .offer-title {
         font-size: 36px;
-        /* Giảm cỡ chữ */
+    }
+    
+    .offer-image-container {
+        justify-content: center;
     }
 
     .image-box {
         width: 250px;
-        /* Điều chỉnh lại kích thước cho phù hợp */
         height: 400px;
     }
-
-    /* --- 5. CONTACT FORM (Bổ sung) --- */
-    .consultation-form {
-        gap: 0 20px;
-        /* Giữ khoảng cách ngang */
-    }
-
-    .form-group {
-        flex-basis: 100%;
-        /* Mỗi ô input chiếm 100% chiều rộng */
-        min-width: 100%;
-    }
-
-    /* --- 6. FOOTER (Bổ sung) --- */
-    .footer-container {
-        flex-direction: column;
-        /* Xếp chồng 2 cột footer */
-        gap: 40px;
-    }
-
-    .footer-left {
-        padding-right: 0;
-    }
-
-    .footer-right {
-        justify-content: flex-start;
-        /* Căn lề lại map */
-    }
-
-    /* --- 7. PADDING CHUNG (Bổ sung) --- */
-    .detail-section {
-        padding: 40px 20px;
-        /* Giảm padding lớn */
-    }
-
-    #cac-dich-vu {
-        padding: 40px 20px;
+    .image-box::before {
+        top: -20px;
+        left: -20px;
+        right: -20px;
+        bottom: -20px;
     }
 
     .contact-form-section {
         padding: 40px 20px;
     }
+    
+    .consultation-form {
+        gap: 15px;
+    }
+    
+    .form-group {
+        flex-basis: 100%;
+        min-width: 100%;
+    }
+
+    .final-footer {
+        padding: 40px 0;
+    }
+    .footer-container {
+        flex-direction: column;
+        gap: 30px;
+        padding: 0 20px;
+    }
+    
+    .footer-right {
+        justify-content: center;
+    }
+
+    .contact-info .info-item {
+        justify-content: center;
+    }
 }
+

@@ -132,10 +132,12 @@ body {
     width: 650px;
     background-color: #fcfcfc;
     border: 2px solid #fff3cd;
-    z-index: 10;
+    z-index: 1000;
     justify-content: space-around;
     padding: 30px;
     align-items: center;
+    max-height: 90vh;
+    overflow-y: auto;
 }
 
 /* ĐỊNH KIỂU 2 CỘT */
@@ -146,6 +148,7 @@ body {
     gap: 15px;
     padding-right: 30px;
     border-right: 2px solid #fff3cd;
+    flex-shrink: 0;
 }
 
 /* CÁC MỤC MENU*/
@@ -171,6 +174,7 @@ body {
     line-height: 1.6;
     /* Tăng khoảng cách dòng cho dễ thở */
     padding-left: 30px;
+    flex-grow: 1;
 }
 
 .footer-info .icon {
@@ -450,6 +454,12 @@ body {
  .navbar {
   padding: 20px 30px;
  }
+ .nav-center .logo {
+  font-size: 16px;
+ }
+ .nav-right a {
+  font-size: 12px;
+ }
  .intro-layout, .offer-layout {
   flex-direction: column;
   text-align: center;
@@ -470,6 +480,7 @@ body {
  .consultation-form > .form-group:nth-child(-n+4),
  .form-group {
   width: calc(50% - 10px);
+  min-width: unset;
  }
  .consultation-form > .form-group:nth-child(7) {
   width: 100%;
@@ -478,13 +489,121 @@ body {
   flex-direction: column;
   text-align: center;
   align-items: center;
+  padding: 0 20px;
  }
+ .footer-left {
+    padding-right: 0;
+    margin-bottom: 30px;
+}
  .footer-right {
-  justify-content: center;
- }
+    justify-content: center;
+    width: 100%;
+}
+.contact-info .info-item {
+    justify-content: center;
+    text-align: left;
+}
  .social-icons {
   justify-content: center;
  }
+ .footer-logo {
+    margin-bottom: 20px;
+ }
+ .map-image {
+    max-width: 100%;
+ }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+    .nav-left a, .nav-right a, .nav-center .logo {
+        font-size: 14px;
+    }
+
+    .dropdown-content {
+        width: 90vw; 
+        padding: 20px 10px;
+        flex-direction: column; 
+        text-align: center;
+        justify-content: flex-start;
+    }
+
+    .footer-nav {
+        width: 100%; 
+        border-right: none;
+        border-bottom: 1px solid #fff3cd; 
+        padding-right: 0;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+
+    .footer-nav .nav-item {
+        width: 100%; 
+        text-align: center;
+        border-bottom: none;
+    }
+
+    .footer-info {
+        padding-left: 0;
+        width: 100%;
+    }
+    .footer-info .info-group {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center; 
+        text-align: left;
+    }
+    .footer-info .icon {
+        margin-right: 10px;
+    }
+    .social-links {
+        justify-content: center;
+    }
+
+    .uu-dai-text {
+        font-size: 32px;
+        line-height: 1.3;
+        top: 20%; 
+    }
+
+    .image-7 {
+        height: 35vh; 
+    }
+
+    .image-6 {
+        height: auto; 
+    }
+
+    .uu-dai-main-text {
+        font-size: 20px;
+        line-height: 1.6;
+        padding: 20px;
+    }
+
+    .consultation-form > .form-group:nth-child(-n+4),
+    .form-group {
+        width: 100%; 
+    }
+
+    .form-title {
+        font-size: 20px;
+    }
+
+    .submit-button {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .contact-info .info-item {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .contact-info p {
+        text-align: left;
+    }
 }
 
 @media (max-width: 600px) {
@@ -505,6 +624,20 @@ body {
  .form-group {
   width: 100%;
  }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px 15px;
+    }
+    .nav-left, .nav-right {
+        gap: 5px;
+    }
+
+    .uu-dai-text {
+        font-size: 24px;
+        top: 15%;
+    }
 }
 
 #uu-dai {

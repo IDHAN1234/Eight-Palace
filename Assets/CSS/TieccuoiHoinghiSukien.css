@@ -71,18 +71,19 @@ body {
 
 .dropdown-content {
     display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 100%;
+    left: -200px;
+    transform: none;
     /* Kỹ thuật căn giữa tuyệt đối */
     width: 650px;
     background-color: #fcfcfc;
     border: 2px solid #fff3cd;
-    z-index: 10;
+    z-index: 100;
+    display: flex;
     justify-content: space-around;
     padding: 30px;
-    align-items: center;
+    align-items: flex-start;
 }
 
 /* ĐỊNH KIỂU 2 CỘT */
@@ -163,6 +164,7 @@ body {
   align-items: center;
   justify-content: flex-start;
   color: rgb(247, 247, 247);
+  padding-top: 80px;
 }
 
 .hinhGt {
@@ -287,7 +289,7 @@ body {
 }
 
 .form-group {
-  flex: 1 1 calc(25% - 15px);
+  flex: 1 1 calc(50% - 10px);
   min-width: 180px;
 }
 
@@ -420,23 +422,23 @@ body {
 
 
 /* RESPONSIVE */
-/* --- TABLET (768px) --- */
+
+@media (min-width: 1024px) {
+    .form-group {
+        flex: 1 1 calc(25% - 15px); 
+    }
+}
 
 @media (min-width: 768px) {
 
-  /* Chuyển sang layout 2 cột */
   .thucDonNd,
   .trangTriNd,
   .sanhTiengNd {
     flex-direction: row;
-    /* Xếp hàng ngang */
     gap: 50px;
-    /* Trả lại gap lớn */
     text-align: left;
-    /* Trả lại căn lề trái */
   }
 
-  /* Thêm lại padding-left cho cột chữ */
   .vanTd,
   .vanTt,
   .vanSt {
