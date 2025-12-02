@@ -1,7 +1,7 @@
 # 🏰 Eight Palace - Website Trung tâm Hội nghị & Tiệc cưới
 
 [![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)](https://eight-palace-rust.vercel.app/index.html)
-> **Đồ án môn học:** Thiết kế Web (Front-end)
+
 > **Mô tả:** Website giới thiệu và đặt tiệc trực tuyến cho trung tâm Eight Palace. Dự án kết hợp thiết kế sang trọng với các kỹ thuật lập trình hiện đại như Lazy Loading, Video Background Slider và Menu điều hướng dạng Modal.
 
 🌟 Tính năng Nổi bật
