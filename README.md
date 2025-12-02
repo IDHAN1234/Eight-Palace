@@ -81,26 +81,28 @@ EIGHT-PALACE/
 ```
 
 🛠️ Công nghệ & Kỹ thuật
-HTML5: Semantic Tags (header, nav, section, footer).
+- HTML5: Semantic Tags (header, nav, section, footer).
 
-CSS3:
+- CSS3:
 
-Layout: Sử dụng linh hoạt Flexbox (Navbar, Form) và Grid (Thực đơn, Trang trí).
+  + Layout: Sử dụng linh hoạt Flexbox (Navbar, Form) và Grid (Thực đơn, Trang trí).
 
-Scroll Snap: scroll-snap-type: y proximity giúp trải nghiệm cuộn mượt mà.
+  + Scroll Snap: scroll-snap-type: y proximity giúp trải nghiệm cuộn mượt mà.
 
-Positioning: Sử dụng fixed cho Menu Modal và Navbar, absolute cho Video Background.
+  + Positioning: Sử dụng fixed cho Menu Modal và Navbar, absolute cho Video Background.
 
-Variables: Sử dụng tông màu chủ đạo Vàng đồng #957b1c và Kem #fcfcfc.
+  +  Variables: Sử dụng tông màu chủ đạo Vàng đồng #957b1c và Kem #fcfcfc.
 
-JavaScript (Vanilla):
+- JavaScript (Vanilla):
 
-IntersectionObserver API: Kỹ thuật Lazy Loading hình ảnh giúp tăng tốc độ tải trang.
+  + IntersectionObserver API: Kỹ thuật Lazy Loading hình ảnh giúp tăng tốc độ tải trang.
 
-DOM Manipulation: Xử lý sự kiện click, scroll, wheel.
+  + DOM Manipulation: Xử lý sự kiện click, scroll, wheel.
 
 🧩 Giải thích Code (Code Highlights)
-1. Logic Lazy Loading (Tối ưu hiệu năng)
+
+1. Logic Lazy Loading (Tối ưu hiệu năng):
+
 Sử dụng IntersectionObserver để chỉ tải hình ảnh khi chúng xuất hiện trong khung nhìn (Viewport).
 
 JavaScript
@@ -118,7 +120,8 @@ const imageObserver = new IntersectionObserver((entries, observer) => {
 });
 ```
 
-2. Logic Menu Modal (Đóng/Mở thông minh)
+2. Logic Menu Modal (Đóng/Mở thông minh):
+
 Kiểm tra mục tiêu click (event.target) để xác định xem người dùng có click ra ngoài menu hay không.
 
 JavaScript
@@ -131,7 +134,8 @@ window.addEventListener('click', function(event) {
     }
 });
 ```
-3. CSS Grid Layout (Thực đơn & Trang trí)
+3. CSS Grid Layout (Thực đơn & Trang trí):
+
 Sử dụng Grid để tạo bố cục lưới tự động điều chỉnh (auto-fit) trên các màn hình khác nhau.
 
 CSS
@@ -142,6 +146,6 @@ CSS
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
 }
-text
+```
 
 Dự án được thực hiện nhằm mục đích học tập.
