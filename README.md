@@ -6,40 +6,42 @@
 
 🌟 Tính năng Nổi bật
 1. Trải nghiệm Người dùng (UX/UI)
-Hero Hybrid Slider (Trang chủ):
 
-Kết hợp độc đáo giữa trượt ngang (3 slide đầu) và cuộn dọc (các phần nội dung sau).
+- Hero Hybrid Slider (Trang chủ):
 
-Tích hợp Video Background tự động phát (autoplay muted) tạo hiệu ứng thị giác mạnh mẽ.
+  +  Kết hợp độc đáo giữa trượt ngang (3 slide đầu) và cuộn dọc (các phần nội dung sau).
 
-Hiệu ứng Scroll Snap giúp nội dung tự động bắt dính vào khung hình khi cuộn.
+  + Tích hợp Video Background tự động phát (autoplay muted) tạo hiệu ứng thị giác mạnh mẽ.
 
-Mega Modal Menu:
+  + Hiệu ứng Scroll Snap giúp nội dung tự động bắt dính vào khung hình khi cuộn.
 
-Thanh điều hướng ẩn, xuất hiện dạng cửa sổ nổi (Modal) fixed giữa màn hình.
+- Mega Modal Menu:
 
-Tự động đóng khi click ra ngoài vùng nội dung (Click-outside detection).
+  + Thanh điều hướng ẩn, xuất hiện dạng cửa sổ nổi (Modal) fixed giữa màn hình.
 
-Hiệu ứng Tương tác:
+  + Tự động đóng khi click ra ngoài vùng nội dung (Click-outside detection).
 
-Nút mũi tên có hiệu ứng bounce (nảy) thu hút sự chú ý.
+- Hiệu ứng Tương tác:
 
-Hình ảnh phóng to nhẹ (scale) và đổ bóng khi di chuột (Hover effects).
+  + Nút mũi tên có hiệu ứng bounce (nảy) thu hút sự chú ý.
+
+  + Hình ảnh phóng to nhẹ (scale) và đổ bóng khi di chuột (Hover effects).
 
 2. Chức năng Các Trang
-Trang Chủ: Tổng quan, Video giới thiệu, Danh sách dịch vụ nổi bật.
 
-Sảnh Tiệc: Tích hợp Slideshow truyền thống (Next/Prev) để xem chi tiết không gian sảnh (Amore, Aimer, Rakkaus).
+- Trang Chủ: Tổng quan, Video giới thiệu, Danh sách dịch vụ nổi bật.
 
-Thực Đơn: Trình bày món ăn dạng lưới (Grid Layout), hiển thị rõ hình ảnh và giá tiền.
+- Sảnh Tiệc: Tích hợp Slideshow truyền thống (Next/Prev) để xem chi tiết không gian sảnh (Amore, Aimer, Rakkaus).
 
-Đặt Bàn:
+- Thực Đơn: Trình bày món ăn dạng lưới (Grid Layout), hiển thị rõ hình ảnh và giá tiền.
 
-Form đặt tiệc chi tiết (Ngày, Giờ, Số khách).
+- Đặt Bàn:
 
-Giao diện chọn phong cách bài trí bàn tiệc trực quan.
+  + Form đặt tiệc chi tiết (Ngày, Giờ, Số khách).
 
-Trang Trí & Dịch Vụ: Thư viện hình ảnh các mẫu trang trí và thông tin chi tiết các gói dịch vụ (Tiệc cưới, Hội nghị, Sự kiện).
+  + Giao diện chọn phong cách bài trí bàn tiệc trực quan.
+
+- Trang Trí & Dịch Vụ: Thư viện hình ảnh các mẫu trang trí và thông tin chi tiết các gói dịch vụ (Tiệc cưới, Hội nghị, Sự kiện).
 
 📂 Cấu trúc Thư mục
 ```text
@@ -102,7 +104,7 @@ DOM Manipulation: Xử lý sự kiện click, scroll, wheel.
 Sử dụng IntersectionObserver để chỉ tải hình ảnh khi chúng xuất hiện trong khung nhìn (Viewport).
 
 JavaScript
-
+```text
 // trangchu.js
 const imageObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
@@ -114,11 +116,13 @@ const imageObserver = new IntersectionObserver((entries, observer) => {
         }
     });
 });
+```
+
 2. Logic Menu Modal (Đóng/Mở thông minh)
 Kiểm tra mục tiêu click (event.target) để xác định xem người dùng có click ra ngoài menu hay không.
 
 JavaScript
-
+```text
 // menudropdown.js
 window.addEventListener('click', function(event) {
     // Nếu click KHÔNG trúng nút menu VÀ KHÔNG trúng bảng nội dung -> Đóng menu
@@ -126,16 +130,18 @@ window.addEventListener('click', function(event) {
         dropdownContent.style.display = 'none';
     }
 });
+```
 3. CSS Grid Layout (Thực đơn & Trang trí)
 Sử dụng Grid để tạo bố cục lưới tự động điều chỉnh (auto-fit) trên các màn hình khác nhau.
 
 CSS
-
+```text
 /* Trangtri.css / Thucdon.css */
 .danh-sach-anh {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
 }
+text
 
 Dự án được thực hiện nhằm mục đích học tập.
