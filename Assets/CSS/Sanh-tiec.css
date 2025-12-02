@@ -109,10 +109,12 @@ body {
   padding: 20px 60px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  color: white;
+  align-items: center;
+  color: rgb(255, 255, 255);
   z-index: 100;
   transition: background-color 0.3s;
+  background-color: #957b1c;
+
 }
 
 .navbar a {

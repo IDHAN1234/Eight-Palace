@@ -80,9 +80,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: white;
+    color: rgb(255, 255, 255);
     z-index: 100;
     transition: background-color 0.3s;
+    background-color: #957b1c;
 }
 
 .navbar a {
@@ -116,6 +117,33 @@ body {
     font-size: 14px;
 }
 
+.hamburger-menu {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 110;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .nav-right a {
+        display: none;
+    }
+
+    .nav-right .hamburger-menu {
+        display: block;
+    }
+
+    .nav-left {
+        gap: 0;
+    }
+}
+
+
 /* 2.1. THIẾT LẬP MENU DROP-DOWN */
 
 .menu-item-dropdown {
@@ -129,7 +157,6 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* Kỹ thuật căn giữa tuyệt đối */
     width: 650px;
     background-color: #fcfcfc;
     border: 2px solid #fff3cd;
@@ -137,6 +164,41 @@ body {
     justify-content: space-around;
     padding: 30px;
     align-items: center;
+}
+
+@media (max-width: 700px) {
+    .dropdown-content {
+        width: 100vw;
+        height: 100vh;
+        padding: 40px 20px;
+        overflow-y: auto;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .footer-nav {
+        border-right: none;
+        padding-right: 0;
+        margin-bottom: 30px;
+        width: 100%;
+        align-items: center;
+    }
+
+    .footer-nav .nav-item {
+        width: 80%;
+        max-width: 250px;
+        color: #b18e5e;
+    }
+
+    .footer-info {
+        padding-left: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .footer-info .info-group {
+        justify-content: center;
+    }
 }
 
 /* ĐỊNH KIỂU 2 CỘT */
@@ -168,36 +230,27 @@ body {
 
 .footer-info {
     color: #333333;
-    /* Áp dụng màu xám đậm cho tất cả văn bản */
     line-height: 1.6;
-    /* Tăng khoảng cách dòng cho dễ thở */
     padding-left: 30px;
 }
 
 .footer-info .icon {
     color: #b18e5e;
-    /* Giữ lại màu nhấn cho icon */
     margin-right: 8px;
-    /* Thêm khoảng cách nhỏ */
 }
 
 .social-links,
 .social-icons {
     display: flex;
     gap: 15px;
-    /* Khoảng cách giữa các icon */
     margin-top: 20px;
-    /* Khoảng cách với nội dung bên trên */
 }
 
 .social-links img,
 .social-icons img {
     width: 24px;
-    /* Kích thước tiêu chuẩn, nhỏ gọn */
     height: 24px;
-    /* Đảm bảo icon hình vuông */
     object-fit: contain;
-    /* Đảm bảo icon không bị méo/vỡ */
 }
 
 
@@ -350,6 +403,27 @@ body {
     font-weight: 400;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
     padding: 0 40px;
+}
+
+@media (max-width: 600px) {
+    .main-title-hero {
+        font-size: 48px; 
+    }
+
+    .subtitle-hero {
+        font-size: 20px; 
+        letter-spacing: 2px; 
+    }
+    
+    .hero-content p {
+        font-size: 16px; 
+    }
+
+    .hero-video-bg,
+    .hero-image-bg {
+        width: 100vw;
+        height: 100vh;
+    }
 }
 
 /* --- 5. GIỚI THIỆU CHUNG (SECTION 4) --- */
@@ -576,6 +650,44 @@ body {
     z-index: 2;
 }
 
+@media (max-width: 768px) {
+    .offer-content {
+        padding: 30px; 
+    }
+
+    .offer-content::before {
+        top: -10px;
+        left: -10px;
+        right: -10px;
+        bottom: -10px;
+    }
+
+    .image-box {
+        width: 250px; 
+        height: 350px;
+    }
+
+    .image-box::before {
+        top: -10px;
+        left: -10px;
+        right: -10px;
+        bottom: -10px;
+    }
+
+    .image-box img {
+        width: 180px; 
+        height: 250px;
+    }
+    
+    .offer-title {
+        font-size: 40px;
+    }
+    
+    .offer-time {
+        font-size: 20px;
+    }
+}
+
 /* --- 8. LIÊN HỆ (SECTION 7) --- */
 .contact-form-section {
     background-color: #ffffff;
@@ -599,6 +711,7 @@ body {
     margin: 0 auto;
     gap: 20px;
 }
+
 
 .form-group {
     flex: 1 1 calc(25% - 15px);
@@ -782,6 +895,19 @@ body {
         justify-content: center;
     }
 
+    .footer-left {
+        padding-right: 0;
+        width: 100%;
+    }
+
+    .footer-logo {
+        text-align: center;
+    }
+
+    .contact-info .info-item {
+        justify-content: center;
+    }
+    
     .social-icons {
         justify-content: center;
     }
@@ -801,6 +927,15 @@ body {
         gap: 15px;
     }
 
+    .service-item {
+        min-width: auto;
+        flex: 1 1 100%;
+    }
+
+    .service-item img {
+        height: 300px;
+    }
+
     .services-title {
         font-size: 32px;
     }
@@ -809,4 +944,52 @@ body {
     .form-group {
         width: 100%;
     }
+
+    .contact-form-section {
+        padding: 0 20px;
+    }
+}
+
+/* --- BỔ SUNG MEDIA QUERY CHO ĐIỆN THOẠI NHỎ --- */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px 15px;
+    }
+
+    .nav-center .logo {
+        font-size: 16px;
+    }
+
+    .main-title-hero {
+        font-size: 36px;
+    }
+
+    .subtitle-hero {
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+
+
+    .final-footer {
+        padding: 40px 15px;
+    }
+
+    .footer-container {
+        padding: 0 15px;
+    }
+
+    .map-image {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+}
+
+
+/* --- 11. LAZY LOADING IMAGE STYLES --- */
+.lazy {
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+.lazy-loaded {
+    opacity: 1;
 }

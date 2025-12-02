@@ -81,6 +81,7 @@ body {
  color: white;
  z-index: 100;
  transition: background-color 0.3s;
+ background-color: #957b1c;
 }
 
 .navbar a {
