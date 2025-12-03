@@ -99,6 +99,24 @@ EIGHT-PALACE/
 
   + DOM Manipulation: Xử lý sự kiện click, scroll, wheel.
 
+🚀 Hướng dẫn Cài đặt & Chạy:
+
+Dự án này là trang web tĩnh (Static Website), bạn không cần cài đặt môi trường phức tạp.
+
+Clone hoặc Tải dự án:
+
+Bash
+```text
+git clone https://github.com/username-cua-ban/eight-palace.git
+```
+Mở dự án: Mở thư mục dự án bằng VS Code.
+
+Chạy trang web:
+
+Cài đặt Extension Live Server trong VS Code.
+
+Chuột phải vào file index.html và chọn "Open with Live Server".
+
 🧩 Giải thích Code (Code Highlights)
 
 1. Logic Lazy Loading (Tối ưu hiệu năng):
